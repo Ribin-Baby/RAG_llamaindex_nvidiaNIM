@@ -10,9 +10,10 @@
 
 * build the docker image 
 > docker build -t chatapp .
+* `chatapp` is the image name
 
 * run the container from the above created image
-> docker run -p 8000:8000 chatbot
+> docker run -p 8000:8000 chatapp
 
 * this will expose the REST API to the application, which can be accessed from the host machine at the following endpoint
 > http://localhost:8000/query
