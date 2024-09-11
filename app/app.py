@@ -7,6 +7,7 @@ from llama_index.core import VectorStoreIndex
 from llama_index.postprocessor.nvidia_rerank import NVIDIARerank
 
 from fastapi import FastAPI
+from typing import List
 
 from dotenv import load_dotenv
 import os
@@ -44,5 +45,5 @@ async def chat(query):
     response = reranker_query_engine.query(
     query
     )
-    # chathistory.append(item)
+    chathistory.append(response)
     return {"query": query, "response": response.response, "documents": response.metadata}
