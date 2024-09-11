@@ -16,7 +16,6 @@ load_dotenv()
 
 app = FastAPI()
 
-
 # In-memory database (for demonstration purposes)
 chathistory: List = []
 
@@ -36,8 +35,7 @@ reranker_query_engine = index.as_query_engine(
 async def reload():
     return {"response": "http://localhost/docs -> for how to use !"}
 
-
-# Create an item
+# chat here
 @app.get("/query")
 async def chat(query):
     global reranker_query_engine
