@@ -6,9 +6,7 @@ from llama_index.core import SimpleDirectoryReader
 from llama_index.core import VectorStoreIndex
 from llama_index.postprocessor.nvidia_rerank import NVIDIARerank
 
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from typing import List, Optional
+from fastapi import FastAPI
 
 from dotenv import load_dotenv
 import os
